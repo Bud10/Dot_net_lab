@@ -1,222 +1,216 @@
-##Git Cheatsheet
+# **Git Cheatsheet**
 
 A cheatsheet for common Git commands.
-##Table of Contents
 
-    Setup and Configuration
+## **Table of Contents**
 
-    Basic Commands
+- **Setup and Configuration**
+- **Basic Commands**
+- **Branching and Merging**
+- **Staging and Committing**
+- **Remote Repositories**
+- **Viewing History and Diffs**
+- **Advanced Git Commands**
 
-    Branching and Merging
+## **Setup and Configuration**
 
-    Staging and Committing
+- **Set your name**:  
+  `git config --global user.name "Your Name"`
 
-    Remote Repositories
+- **Set your email**:  
+  `git config --global user.email "your.email@example.com"`
 
-    Viewing History and Diffs
+- **Check config**:  
+  `git config --list`
 
-    Advanced Git Commands
+- **Set default editor (e.g., Vim)**:  
+  `git config --global core.editor "vim"`
 
-##Setup and Configuration
+- **Unset a configuration**:  
+  `git config --global --unset user.name`
 
-    Set your name:
-    git config --global user.name "Your Name"
+## **Basic Commands**
 
-    Set your email:
-    git config --global user.email "your.email@example.com"
+- **Initialize a new repository**:  
+  `git init`
 
-    Check config:
-    git config --list
+- **Clone a repository**:  
+  `git clone <url>`
 
-    Set default editor (e.g., Vim):
-    git config --global core.editor "vim"
+- **Check status**:  
+  `git status`
 
-    Unset a configuration:
-    git config --global --unset user.name
+- **View changes**:  
+  `git diff`
 
-##Basic Commands
+- **View detailed file status**:  
+  `git status -v`
 
-    Initialize a new repository:
-    git init
+## **Branching and Merging**
 
-    Clone a repository:
-    git clone <url>
+- **List branches**:  
+  `git branch`
 
-    Check status:
-    git status
+- **Create a new branch**:  
+  `git branch <branch-name>`
 
-    View changes:
-    git diff
+- **Switch to a branch**:  
+  `git checkout <branch-name>`
 
-    View detailed file status:
-    git status -v
+- **Create and switch to a new branch**:  
+  `git checkout -b <branch-name>`
 
-##Branching and Merging
+- **Merge a branch**:  
+  `git merge <branch-name>`
 
-    List branches:
-    git branch
+- **Delete a branch**:  
+  `git branch -d <branch-name>`
 
-    Create a new branch:
-    git branch <branch-name>
+- **Force delete a branch (use with caution)**:  
+  `git branch -D <branch-name>`
 
-    Switch to a branch:
-    git checkout <branch-name>
+- **List all branches (including remote)**:  
+  `git branch -a`
 
-    Create and switch to a new branch:
-    git checkout -b <branch-name>
+- **Rename current branch**:  
+  `git branch -m <new-name>`
 
-    Merge a branch:
-    git merge <branch-name>
+## **Staging and Committing**
 
-    Delete a branch:
-    git branch -d <branch-name>
+- **Stage files**:  
+  `git add <file>` or `git add .` (stages all changes)
 
-    Force delete a branch (use with caution):
-    git branch -D <branch-name>
+- **Commit changes**:  
+  `git commit -m "Your commit message"`
 
-    List all branches (including remote):
-    git branch -a
+- **Commit changes with a specific editor**:  
+  `git commit`
 
-    Rename current branch:
-    git branch -m <new-name>
+- **Commit all changes and skip the editor**:  
+  `git commit -am "Your commit message"`
 
-##Staging and Committing
+- **View commit history**:  
+  `git log`
 
-    Stage files:
-    git add <file> or git add . (stages all changes)
+- **View commit history in one line**:  
+  `git log --oneline`
 
-    Commit changes:
-    git commit -m "Your commit message"
+- **View a specific file's commit history**:  
+  `git log <file>`
 
-    Commit changes with a specific editor:
-    git commit
+- **Show commit differences**:  
+  `git diff <commit1> <commit2>`
 
-    Commit all changes and skip the editor:
-    git commit -am "Your commit message"
+## **Remote Repositories**
 
-    View commit history:
-    git log
+- **Add a remote**:  
+  `git remote add origin <url>`
 
-    View commit history in one line:
-    git log --oneline
+- **Push to remote**:  
+  `git push origin <branch-name>`
 
-    View a specific file's commit history:
-    git log <file>
+- **Pull from remote**:  
+  `git pull origin <branch-name>`
 
-    Show commit differences:
-    git diff <commit1> <commit2>
+- **Fetch without merging**:  
+  `git fetch origin`
 
-##Remote Repositories
+- **List remotes**:  
+  `git remote -v`
 
-    Add a remote:
-    git remote add origin <url>
+- **Remove a remote**:  
+  `git remote remove <remote-name>`
 
-    Push to remote:
-    git push origin <branch-name>
+- **Push a new tag to remote**:  
+  `git push origin <tag-name>`
 
-    Pull from remote:
-    git pull origin <branch-name>
+- **Push all branches**:  
+  `git push --all origin`
 
-    Fetch without merging:
-    git fetch origin
+- **Push a specific tag**:  
+  `git push origin <tag-name>`
 
-    List remotes:
-    git remote -v
+## **Viewing History and Diffs**
 
-    Remove a remote:
-    git remote remove <remote-name>
+- **View changes in a file**:  
+  `git diff <file>`
 
-    Push a new tag to remote:
-    git push origin <tag-name>
+- **View who changed what**:  
+  `git blame <file>`
 
-    Push all branches:
-    git push --all origin
+- **View a file's history**:  
+  `git log <file>`
 
-    Push a specific tag:
-    git push origin <tag-name>
+- **Show the changes in a specific commit**:  
+  `git show <commit-hash>`
 
-##Viewing History and Diffs
+- **Compare changes between branches**:  
+  `git diff <branch1> <branch2>`
 
-    View changes in a file:
-    git diff <file>
+- **View commit history with diff**:  
+  `git log -p`
 
-    View who changed what:
-    git blame <file>
+- **Show a commit with a summary**:  
+  `git show --stat <commit-hash>`
 
-    View a file's history:
-    git log <file>
+## **Advanced Git Commands**
 
-    Show the changes in a specific commit:
-    git show <commit-hash>
+- **Stash changes**: Temporarily saves uncommitted changes to apply later.  
+  `git stash`  
+  Save changes temporarily to apply later.
 
-    Compare changes between branches:
-    git diff <branch1> <branch2>
+- **Apply stashed changes**: Reapplies changes from the stash to the working directory.  
+  `git stash apply`
 
-    View commit history with diff:
-    git log -p
+- **List stashes**: Displays a list of all stashed changes.  
+  `git stash list`
 
-    Show a commit with a summary:
-    git show --stat <commit-hash>
+- **Drop a specific stash**: Removes a specific stash from the stash list.  
+  `git stash drop <stash@{0}>`
 
-##Advanced Git Commands
+- **Delete all stashes**: Clears all stashed changes.  
+  `git stash clear`
 
-    Stash changes: Temporarily saves uncommitted changes to apply later.
-    git stash
-    Save changes temporarily to apply later.
+- **Revert a commit**: Creates a new commit that undoes a previous commit.  
+  `git revert <commit-hash>`
 
-    Apply stashed changes: Reapplies changes from the stash to the working directory (git stash apply).
-    git stash apply
+- **Reset to a previous commit (soft, mixed, or hard)**:  
+  Resets the repository to a specific commit, with different options for keeping or discarding changes.
+  - Soft (keeps changes in staging):  
+    `git reset --soft <commit-hash>`
+  
+  - Mixed (keeps changes, but unstages them):  
+    `git reset --mixed <commit-hash>`
+  
+  - Hard (discards changes):  
+    `git reset --hard <commit-hash>`
 
-    List stashes: Displays a list of all stashed changes (git stash list).
-    git stash list
+- **Show diff of changes between working directory and staging**: Displays differences between unstaged and staged changes.  
+  `git diff`
 
-    Drop a specific stash: Removes a specific stash from the stash list (git stash drop <stash@{0}>).
-    git stash drop <stash@{0}>
+- **Undo last commit but keep changes**: Undoes the last commit but keeps the changes in the working directory.  
+  `git reset --soft HEAD~1`
 
-    Delete all stashes: Clears all stashed changes (git stash clear).
-    git stash clear
+- **Show current branch**: Displays the name of the current branch.  
+  `git branch --show-current`
 
-    Revert a commit: Creates a new commit that undoes a previous commit (git revert <commit-hash>).
-    git revert <commit-hash>
+- **Create a new tag**: Adds a new tag to the current commit.  
+  `git tag <tag-name>`
 
-    Reset to a previous commit (soft, mixed, or hard):
-    Resets the repository to a specific commit, with different options for keeping or discarding changes.
+- **List all tags**: Displays a list of all tags in the repository.  
+  `git tag`
 
-        Soft (keeps changes in staging):
-        git reset --soft <commit-hash>
+- **Delete a local tag**: Deletes a specific local tag.  
+  `git tag -d <tag-name>`
 
-        Mixed (keeps changes, but unstages them):
-        git reset --mixed <commit-hash>
+- **Delete a remote tag**: Removes a tag from the remote repository.  
+  `git push --delete origin <tag-name>`
 
-        Hard (discards changes):
-        git reset --hard <commit-hash>
+- **Rebase a branch**: Reapplies commits from the current branch onto another branch.  
+  `git rebase <branch-name>`
 
-    Show diff of changes between working directory and staging: Displays differences between unstaged and staged changes (git diff).
-    git diff
+- **Squash commits**: Combines multiple commits into one.  
+  `git rebase -i <commit-hash>`
 
-    Undo last commit but keep changes: Undoes the last commit but keeps the changes in the working directory (git reset --soft HEAD~1).
-    git reset --soft HEAD~1
-
-    Show current branch: Displays the name of the current branch (git branch --show-current).
-    git branch --show-current
-
-    Create a new tag: Adds a new tag to the current commit (git tag <tag-name>).
-    git tag <tag-name>
-
-    List all tags: Displays a list of all tags in the repository (git tag).
-    git tag
-
-    Delete a local tag: Deletes a specific local tag (git tag -d <tag-name>).
-    git tag -d <tag-name>
-
-    Delete a remote tag: Removes a tag from the remote repository (git push --delete origin <tag-name>).
-    git push --delete origin <tag-name>
-
-    Rebase a branch: Reapplies commits from the current branch onto another branch (git rebase <branch-name>).
-    git rebase <branch-name>
-
-    Squash commits: Combines multiple commits into one (git rebase -i <commit-hash>).
-    git rebase -i <commit-hash>
-
-    Show the diff of staged changes: Displays differences between the staged changes and the previous commit (git diff --staged).
-    git diff --staged
+- **Show the diff of staged changes**: Displays differences between the staged changes and the previous commit.  
+  `git diff --staged`
