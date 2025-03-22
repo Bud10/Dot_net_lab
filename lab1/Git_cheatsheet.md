@@ -1,7 +1,7 @@
-#Git Cheatsheet
+##Git Cheatsheet
 
 A cheatsheet for common Git commands.
-#Table of Contents
+##Table of Contents
 
     Setup and Configuration
 
@@ -17,7 +17,7 @@ A cheatsheet for common Git commands.
 
     Advanced Git Commands
 
-#Setup and Configuration
+##Setup and Configuration
 
     Set your name:
     git config --global user.name "Your Name"
@@ -34,7 +34,7 @@ A cheatsheet for common Git commands.
     Unset a configuration:
     git config --global --unset user.name
 
-#Basic Commands
+##Basic Commands
 
     Initialize a new repository:
     git init
@@ -51,7 +51,7 @@ A cheatsheet for common Git commands.
     View detailed file status:
     git status -v
 
-#Branching and Merging
+##Branching and Merging
 
     List branches:
     git branch
@@ -80,7 +80,7 @@ A cheatsheet for common Git commands.
     Rename current branch:
     git branch -m <new-name>
 
-#Staging and Committing
+##Staging and Committing
 
     Stage files:
     git add <file> or git add . (stages all changes)
@@ -106,7 +106,7 @@ A cheatsheet for common Git commands.
     Show commit differences:
     git diff <commit1> <commit2>
 
-#Remote Repositories
+##Remote Repositories
 
     Add a remote:
     git remote add origin <url>
@@ -135,7 +135,7 @@ A cheatsheet for common Git commands.
     Push a specific tag:
     git push origin <tag-name>
 
-#Viewing History and Diffs
+##Viewing History and Diffs
 
     View changes in a file:
     git diff <file>
@@ -158,7 +158,7 @@ A cheatsheet for common Git commands.
     Show a commit with a summary:
     git show --stat <commit-hash>
 
-#Advanced Git Commands
+##Advanced Git Commands
 
     Stash changes: Temporarily saves uncommitted changes to apply later.
     git stash
